@@ -1,0 +1,48 @@
+table{
+	border-collapse: collapse;
+}
+.numDisplay{
+	background-color: black;
+	color: #333;
+	font-size:12px;
+}
+.selectedNumDisplay{
+	background-color: black;
+	color: red;
+	font-size:12px;
+}
+.letterDisplay{
+	background-color: black;
+	color: white;
+	font-size:12px;
+}
+.patternDisplay{
+	border: 1px solid black;
+	width: 25px;
+	height: 25px;
+}
+
+#bingoTable {
+	float: left;
+	width: 40%;
+}
+#currentPattern{
+	float: right;
+}
+#currentPattern td{
+	background-color: "green";
+}
+#app{
+	display: grid;
+	grid-template-columns: 1fr 1fr 20%;
+	grid-template-rows: 1fr 30px 1fr;
+}
+
+#bingoTable{
+	grid-column: 1/3;
+	width: 100%
+}
+
+#bingoCard{
+	grid-column: 1/3;
+}
