@@ -1,5 +1,5 @@
 const WebSocket = require('ws');
-const uuid = require('uuid');
+const crypto = require('crypto');
 
 const wss = new WebSocket.Server({ port: 8080 });
 
@@ -142,7 +142,7 @@ function showEveryoneElse(ws, data) {
 let winnerFound = false;
 
 wss.on('connection', (ws) => {
-  let id = uuid.v4();
+  let id = crypto.randomUUID();
   const arrival = new Date(Date.now());
   console.log(`User ${id} connected, ${arrival.toString()}`);
   ws.isAlive = true;
